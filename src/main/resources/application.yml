@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_security
+    username: "postgres"
+    password: ""
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
+
+app:
+  security:
+    jwt:
+      secret: 7c70cf9cf53a13f0b6f95b08c43c4c707dfcd6d2345d8e9be2b82730f4b86c80
+      accessTokenExpiration: 60000  # one minute
+      refreshTokenExpiration: 2592000000 # seven days
+
+
